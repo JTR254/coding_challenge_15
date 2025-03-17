@@ -32,7 +32,7 @@ function addRiskItem(riskItem, riskLevel, department) { // creates function that
     resolveButton.setAttribute ("class", "remove-btn");
     resolveButton.textContent = "Resolve"; // puts the word "resolve" inside the button
     resolveButton.addEventListener("click", (event) => { // function so when resolve is clicked, the card disappears.
-        event.stopPropagation()
+        event.stopPropagation() // Task 6
         riskDashboard.removeChild(riskCard)});
     
     riskCard.appendChild(resolveButton); // appends the resolve button to the card
@@ -88,7 +88,7 @@ function highlightLowRiskCards() {
 addRiskItem("Cybersecurity Threat", "High", "IT");
 addRiskItem("HR Compliance Issue", "Low", "Human Resources");
 
-// Task 5 - 
+// Task 5 - Bulk Risk Updates
 
 const increaseRiskButton = document.createElement("button"); // creates a button
 increaseRiskButton.textContent = "Increase Risk Levels"; // includes text "Increase Risk Levels" within the button
@@ -97,3 +97,6 @@ increaseRiskButton.setAttribute("class", "increase-risk-btn");
 riskDashboard.appendChild(increaseRiskButton) // appends child to the dashboard
 
 addRiskItem("Employee Retention", "Low", "HR"); // test case
+
+// Task 6 - Event Propagation Fix
+// done above

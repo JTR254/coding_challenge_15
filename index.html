@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risk Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header><h2>Risk Dashboard</h2></header>
    <main><div id = "Risk Dashboard"></div>
-<h3>Add New Risk</h3>
+<h3>Risk Cards Below</h3>
 <form id="riskDashboard">
 <label for="riskName">Risk Name:</label>
 <input type="text" id="riskName" name="riskName"><br><br>
+<select id = "riskLevel">
+    <option value = "low">Low</option>
+    <option value = "medium">Medium</option>
+    <option value = "high">High</option>
+</select><br><br>
+<label for="riskDepartment">Risk Department:</label>
+<textarea name="riskDepartment" id="riskDepartment"></textarea><br><br>
 
-<label for="riskDescription">Risk Description:</label>
-<textarea name="riskDescription" id="riskDescription"></textarea>
-
-<button type="submit">Add Risk</button>
+<button type="submit">Add Risk</button><br><br>
 </form>
 </main>
     <script src="cc_15.js"></script>

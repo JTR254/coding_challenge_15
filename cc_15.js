@@ -87,3 +87,13 @@ function highlightLowRiskCards() {
 
 addRiskItem("Cybersecurity Threat", "High", "IT");
 addRiskItem("HR Compliance Issue", "Low", "Human Resources");
+
+// Task 5 - 
+
+const increaseRiskButton = document.createElement("button"); // creates a button
+increaseRiskButton.textContent = "Increase Risk Levels"; // includes text "Increase Risk Levels" within the button
+increaseRiskButton.setAttribute("class", "increase-risk-btn");
+
+riskDashboard.appendChild(increaseRiskButton) // appends child to the dashboard
+
+addRiskItem("Employee Retention", "Low", "HR"); // test case

@@ -36,6 +36,10 @@ function addRiskItem(riskItem, riskLevel, department) { // creates function that
         riskDashboard.removeChild(riskCard)});
     
     riskCard.appendChild(resolveButton); // appends the resolve button to the card
+
+    highlightHighRiskCards(); // calls function
+    highlightMediumRiskCards(); // calls function
+    highlightLowRiskCards(); // calls function
 };
 
 addRiskItem("Data Breach", "High", "IT");
@@ -43,3 +47,43 @@ addRiskItem("Supply Chain Disruption", "Medium", "Operations");
 
 // Task 3 - Removing RIsk Items
 // completed above
+addRiskItem("Market Fluctuations", "High", "Finance");
+// Clicking "Resolve" should remove this risk from the dashboard.
+
+// Task 4 - Risk Categorization
+
+function highlightHighRiskCards() {
+    const highRiskCards = document.querySelectorAll(".risk-card"); // Select all cards with "High" priority
+
+    const riskArray = Array.from(highRiskCards); // convert to an array
+    riskArray.forEach(card => {
+        if (card.textContent.includes("High")) {
+            card.style.backgroundColor = "#ffcccc"; // light red background if it is a high priority card
+        }
+    });
+};
+
+function highlightMediumRiskCards() {
+    const mediumRiskCards = document.querySelectorAll(".risk-card"); // Select all cards with "Medium" priority
+
+    const riskArray = Array.from(mediumRiskCards); // convert to an array
+    riskArray.forEach(card => {
+        if (card.textContent.includes("Medium")) {
+            card.style.backgroundColor = "#2aa311"; // sea green background if it is a medium priority card
+        }
+    });
+};
+
+function highlightLowRiskCards() {
+    const lowRiskCards = document.querySelectorAll(".risk-card"); // Select all cards with "Low" priority
+
+    const riskArray = Array.from(lowRiskCards); // convert to an array
+    riskArray.forEach(card => {
+        if (card.textContent.includes("Low")) {
+            card.style.backgroundColor = "#dbf712"; // yellow background if it is a Low priority card
+        }
+    });
+};
+
+addRiskItem("Cybersecurity Threat", "High", "IT");
+addRiskItem("HR Compliance Issue", "Low", "Human Resources");
